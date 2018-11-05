@@ -3,10 +3,13 @@ package eu.micer.translatetomore.feature.main.ui
 import android.arch.lifecycle.Observer
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.helper.ItemTouchHelper
+import android.text.Html
+import android.text.method.LinkMovementMethod
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -89,6 +92,13 @@ class MainActivity : BaseActivity() {
                 mainViewModel.getTranslation(item, code, getString(R.string.yandex_api_key))
             }
         }
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            tv_powered_by.text = Html.fromHtml(getString(R.string.powered_by_yandex_translate), Html.FROM_HTML_MODE_LEGACY)
+        } else {
+            tv_powered_by.text = Html.fromHtml(getString(R.string.powered_by_yandex_translate))
+        }
+        tv_powered_by.movementMethod = LinkMovementMethod.getInstance()
     }
 
     private fun setupFabAndNewLanguageSpinner(languageList: List<String>) {
@@ -99,7 +109,7 @@ class MainActivity : BaseActivity() {
 
         spinner_add_language.adapter = dataAdapter
 
-        spinner_add_language.setSelection(0,false)
+        spinner_add_language.setSelection(0, false)
 
         fab_add_language.setOnClickListener {
             spinner_add_language.performClick()

@@ -3,4 +3,5 @@
     <string name="translate">Translate</string>
     <string name="icon_edit">icon edit row</string>
     <string name="select_from_list">Select language</string>
+    <string name="powered_by_yandex_translate"><![CDATA[<a href="http://translate.yandex.com/">Powered by Yandex.Translate</a>]]></string>
 </resources>

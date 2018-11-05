@@ -39,11 +39,11 @@
         android:layout_marginBottom="16dp"
         android:clickable="true"
         android:focusable="true"
+        android:scaleType="center"
+        app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_add"
-        app:fabSize="normal"
-        android:scaleType="center"/>
+        app:srcCompat="@drawable/ic_add" />
 
     <Spinner
         android:id="@+id/spinner_add_language"
@@ -51,7 +51,19 @@
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         android:prompt="@string/select_from_list"
-        android:theme="@style/ThemeOverlay.AppCompat.Light"
-        android:spinnerMode="dialog"/>
+        android:spinnerMode="dialog"
+        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <TextView
+        android:id="@+id/tv_powered_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/powered_by_yandex_translate" />
 
 </android.support.constraint.ConstraintLayout>

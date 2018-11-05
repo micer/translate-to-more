@@ -1,3 +1,6 @@
+# strings/values/files we don't want to put on git
+strings-protected.xml
+
 # Built application files
 *.apk
 *.ap_

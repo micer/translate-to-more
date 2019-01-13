@@ -9,7 +9,6 @@ import eu.micer.translatetomore.feature.main.model.LanguageItem
 import eu.micer.translatetomore.network.YandexApi
 import eu.micer.translatetomore.network.model.GetLanguagesResponse
 import eu.micer.translatetomore.network.model.TranslationResponse
-import eu.micer.translatetomore.util.Constants
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.addTo
 import io.reactivex.schedulers.Schedulers
